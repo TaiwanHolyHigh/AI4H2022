@@ -21,7 +21,11 @@
 
 ![輸出樣本](https://tensorflow.google.cn/images/gan/dcgan.gif)
 
-
+# 安裝產生 GIFs的套件
+```
+!pip install imageio
+!pip install git+https://github.com/tensorflow/docs
+```
 ### Import TensorFlow and other libraries
 ```
 
@@ -29,11 +33,7 @@ import tensorflow as tf
 
 tf.__version__
 ```
-# 安裝產生 GIFs的套件
-```
-!pip install imageio
-!pip install git+https://github.com/tensorflow/docs
-```
+
 ```
 import glob
 import imageio
