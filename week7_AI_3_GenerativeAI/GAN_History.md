@@ -29,7 +29,7 @@
   - 【TensorFlow 官方教學課程】[CycleGAN](https://www.tensorflow.org/tutorials/generative/cyclegan)
   - Pytorch 實作 [PyTorch Colab](https://colab.research.google.com/github/junyanz/pytorch-CycleGAN-and-pix2pix/blob/master/CycleGAN.ipynb)
   - 論文[Contrastive Learning for Unpaired Image-to-Image Translation(2020)](https://arxiv.org/abs/2007.15651)
-- StackGAN(Stacked Generative Adversarial Networks)
+- StackGAN(Stacked Generative Adversarial Networks) 
   - 論文[StackGAN: Text to Photo-realistic Image Synthesis with Stacked Generative Adversarial Networks](https://arxiv.org/abs/1612.03242) 
 - StyleGAN
 - SRGAN
