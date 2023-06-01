@@ -12,22 +12,26 @@
 
 ![生成器和判別器圖示二](https://github.com/tensorflow/docs/blob/master/site/en/tutorials/generative/images/gan2.png?raw=1)
 
-本筆記在 MNIST 資料集上演示了該過程。下方動畫展示了當訓練了 50 個epoch （全部資料集反覆運算50次） 時*生成器*所生成的一系列圖片。圖片從隨機雜訊開始，隨著時間的推移越來越像手寫數字。
+本筆記在 MNIST 資料集上演示了該過程。下方動畫展示了當訓練了 50 個epoch （全部資料集反覆運算50次） 時*生成器*所生成的一系列圖片。
+
+圖片從隨機雜訊開始，隨著時間的推移越來越像手寫數字。
 
 ![輸出樣本](https://tensorflow.google.cn/images/gan/dcgan.gif)
 
 
 ### Import TensorFlow and other libraries
-"""
+```
 
 import tensorflow as tf
 
 tf.__version__
-
-# To generate GIFs
+```
+# 安裝產生 GIFs的套件
+```
 !pip install imageio
 !pip install git+https://github.com/tensorflow/docs
-
+```
+```
 import glob
 import imageio
 import matplotlib.pyplot as plt
@@ -38,12 +42,10 @@ from tensorflow.keras import layers
 import time
 
 from IPython import display
-
-"""### 載入和準備資料集
-
-您將使用 MNIST 資料集來訓練生成器和判別器。生成器將生成類似於 MNIST 資料集的手寫數字。
-"""
-
+```
+### 載入和準備資料集
+- 使用 MNIST 資料集來訓練生成器和判別器。生成器將生成類似於 MNIST 資料集的手寫數字。
+```
 (train_images, train_labels), (_, _) = tf.keras.datasets.mnist.load_data()
 
 train_images = train_images.reshape(train_images.shape[0], 28, 28, 1).astype('float32')
@@ -55,15 +57,18 @@ BATCH_SIZE = 256
 # Batch and shuffle the data
 train_dataset = tf.data.Dataset.from_tensor_slices(train_images).shuffle(BUFFER_SIZE).batch(BATCH_SIZE)
 
-"""## 創建模型
+```
+## 創建模型
 
 生成器和判別器均使用 [Keras Sequential API](https://tensorflow.google.cn/guide/keras#sequential_model) 定義。
 
 ### 生成器
-
-生成器使用 `tf.keras.layers.Conv2DTranspose`（上採樣）層來從種子（隨機雜訊）中生成圖像。以一個使用該種子作為輸入的 `Dense` 層開始，然後多次上採樣，直至達到所需的 28x28x1 的圖像大小。請注意，除了輸出層使用雙曲正切之外，其他每層均使用 `tf.keras.layers.LeakyReLU` 啟動。
-"""
-
+```
+生成器使用 `tf.keras.layers.Conv2DTranspose`（上採樣）層來從種子（隨機雜訊）中生成圖像。
+以一個使用該種子作為輸入的 `Dense` 層開始，然後多次上採樣，直至達到所需的 28x28x1 的圖像大小。
+請注意，除了輸出層使用雙曲正切之外，其他每層均使用 `tf.keras.layers.LeakyReLU` 啟動。
+```
+```
 def make_generator_model():
     model = tf.keras.Sequential()
     model.add(layers.Dense(7*7*256, use_bias=False, input_shape=(100,)))
@@ -87,21 +92,19 @@ def make_generator_model():
     assert model.output_shape == (None, 28, 28, 1)
 
     return model
-
+```
 """使用（尚未訓練的）生成器創建一張圖片。"""
-
+```
 generator = make_generator_model()
 
 noise = tf.random.normal([1, 100])
 generated_image = generator(noise, training=False)
 
 plt.imshow(generated_image[0, :, :, 0], cmap='gray')
-
+```
 """
-### 判別器
-判別器是一個基於 CNN 的圖片分類器。
-"""
-
+### 判別器:判別器是一個基於 CNN 的圖片分類器。
+```
 def make_discriminator_model():
     model = tf.keras.Sequential()
     model.add(layers.Conv2D(64, (5, 5), strides=(2, 2), padding='same',
@@ -117,38 +120,40 @@ def make_discriminator_model():
     model.add(layers.Dense(1))
 
     return model
-
+```
 """使用（尚未訓練的）判別器對所生成的圖像進行真偽分類。模型將被訓練為對真實圖像輸出正值，對偽造圖像輸出負值。"""
-
+```
 discriminator = make_discriminator_model()
 decision = discriminator(generated_image)
 print (decision)
-
-"""## 定義損失函數和優化器
+```
+## 定義損失函數和優化器
 
 為兩個模型定義損失函數和優化器。
 
-"""
-
 # This method returns a helper function to compute cross entropy loss
+
 cross_entropy = tf.keras.losses.BinaryCrossentropy(from_logits=True)
 
-"""### 判別器損失
+### 判別器損失
+- 該方法量化判別器從判斷真偽圖片的能力。
+- 它將判別器對真實圖片的預測值與值全為 1 的陣列進行對比，
+- 將判別器對偽造（生成的）圖片的預測值與值全為 0 的陣列進行對比。
 
-該方法量化判別器從判斷真偽圖片的能力。它將判別器對真實圖片的預測值與值全為 1 的陣列進行對比，將判別器對偽造（生成的）圖片的預測值與值全為 0 的陣列進行對比。
-"""
+```
 
 def discriminator_loss(real_output, fake_output):
     real_loss = cross_entropy(tf.ones_like(real_output), real_output)
     fake_loss = cross_entropy(tf.zeros_like(fake_output), fake_output)
     total_loss = real_loss + fake_loss
     return total_loss
+```
 
-"""### 生成器損失
-
-生成器的損失可量化其欺騙判別器的能力。直觀地說，如果生成器表現良好，判別器會將偽造圖像分類為真實圖像（或 1）。在此，需要將判別器對生成圖像的決策與值全為 1 的陣列進行對比。
-"""
-
+### 生成器損失
+- 生成器的損失可量化其欺騙判別器的能力。
+- 直觀地說，如果生成器表現良好，判別器會將偽造圖像分類為真實圖像（或 1）。
+- 在此，需要將判別器對生成圖像的決策與值全為 1 的陣列進行對比。
+```
 def generator_loss(fake_output):
     return cross_entropy(tf.ones_like(fake_output), fake_output)
 
@@ -156,23 +161,20 @@ def generator_loss(fake_output):
 
 generator_optimizer = tf.keras.optimizers.Adam(1e-4)
 discriminator_optimizer = tf.keras.optimizers.Adam(1e-4)
+```
 
-"""### 保存檢查點
-
-本筆記還演示了如何保存和恢復模型，這在長時間訓練任務被中斷的情況下比較有説明。
-"""
-
+### 保存檢查點
+- 本筆記還演示了如何保存和恢復模型，這在長時間訓練任務被中斷的情況下比較有説明。
+```
 checkpoint_dir = './training_checkpoints'
 checkpoint_prefix = os.path.join(checkpoint_dir, "ckpt")
 checkpoint = tf.train.Checkpoint(generator_optimizer=generator_optimizer,
                                  discriminator_optimizer=discriminator_optimizer,
                                  generator=generator,
                                  discriminator=discriminator)
-
-"""## 定義訓練迴圈
-
-"""
-
+```
+## 定義訓練迴圈
+```
 EPOCHS = 50
 noise_dim = 100
 num_examples_to_generate = 16
@@ -228,11 +230,10 @@ def train(dataset, epochs):
   generate_and_save_images(generator,
                            epochs,
                            seed)
+```
 
-"""**生成與保存圖片**
-
-"""
-
+### 用來生成與保存圖片的函數
+```
 def generate_and_save_images(model, epoch, test_input):
   # Notice `training` is set to False.
   # This is so all layers run in inference mode (batchnorm).
@@ -247,10 +248,10 @@ def generate_and_save_images(model, epoch, test_input):
 
   plt.savefig('image_at_epoch_{:04d}.png'.format(epoch))
   plt.show()
+```
 
-"""## 訓練模型
-
-調用上面定義的 `train()` 方法來同時訓練生成器和判別器。注意，訓練 GANs 可能是棘手的。重要的是，生成器和判別器不能夠互相壓制對方（例如，他們以相似的學習率訓練）。
+## 訓練模型
+上面定義的 `train()` 方法來同時訓練生成器和判別器。注意，訓練 GANs 可能是棘手的。重要的是，生成器和判別器不能夠互相壓制對方（例如，他們以相似的學習率訓練）。
 
 在訓練之初，生成的圖片看起來像是隨機雜訊。隨著訓練過程的進行，生成的數位將越來越真實。在大概 50 個 epoch 之後，這些圖片看起來像是 MNIST 數位。使用 Colab 中的預設設置可能需要大約 1 分鐘每 epoch。
 """
