@@ -32,12 +32,8 @@ print (x_train.shape)
 print (x_test.shape)
 ```
 ## 第一個範例：基本自編碼器
-
-![Basic autoencoder results](https://github.com/tensorflow/docs-l10n/blob/master/site/zh-cn/tutorials/generative/images/intro_autoencoder_result.png?raw=1)
-
-定義一個具有兩個密集層的自編碼器：一個將圖像壓縮為 64 維隱向量的 `encoder`，以及一個從隱空間重構原始圖像的 `decoder`。
-
-要定義模型，請使用 [Keras Model Subclassing API](https://tensorflow.google.cn/guide/keras/custom_layers_and_models)。
+- 此範例定義一個具有兩個密集層的自編碼器：一個將圖像壓縮為 64 維隱向量的 `encoder`，以及一個從隱空間重構原始圖像的 `decoder`。
+- 此範例使用 [Keras Model Subclassing API](https://tensorflow.google.cn/guide/keras/custom_layers_and_models)定義模型
 
 ```
 
