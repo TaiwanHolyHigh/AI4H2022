@@ -261,13 +261,13 @@ def generate_and_save_images(model, epoch, test_input):
 - 隨著訓練過程的進行，生成的數位將越來越真實。
 - 在大概 50 個 epoch 之後，這些圖片看起來像是 MNIST 數位。
 - 使用 Colab 中的預設設置可能需要大約 1 分鐘每 epoch。
-
+```
 train(train_dataset, EPOCHS)
 
 """恢復最新的檢查點。"""
 
 checkpoint.restore(tf.train.latest_checkpoint(checkpoint_dir))
-
+```
 ## 創建 GIF
 
 
