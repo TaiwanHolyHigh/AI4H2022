@@ -10,7 +10,8 @@
 
 ![生成器和判別器圖示](https://github.com/tensorflow/docs/blob/master/site/en/tutorials/generative/images/gan1.png?raw=1)
 
-訓練過程中，*生成器*在生成逼真圖像方面逐漸變強，而*判別器*在辨別這些圖像的能力上逐漸變強。當*判別器*不再能夠區分真實圖片和偽造圖片時，訓練過程達到平衡。
+- 訓練過程中，*生成器*在生成逼真圖像方面逐漸變強，而*判別器*在辨別這些圖像的能力上逐漸變強。
+- 當*判別器*不再能夠區分真實圖片和偽造圖片時，訓練過程達到平衡。
 
 ![生成器和判別器圖示二](https://github.com/tensorflow/docs/blob/master/site/en/tutorials/generative/images/gan2.png?raw=1)
 
