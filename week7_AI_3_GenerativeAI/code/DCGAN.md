@@ -1,6 +1,15 @@
 # 說明
 - 本教程演示了如何使用[深度卷積生成對抗網路](https://arxiv.org/pdf/1511.06434.pdf) (DCGAN) 生成手寫數位的圖像。
 - 該代碼是使用 [Keras 序列式 API](https://tensorflow.google.cn/guide/keras) 與 `tf.GradientTape` 訓練迴圈編寫的。
+## DCGAN
+- DCGAN的生成器和判別器都捨棄了CNN的池化層
+- 判別器保留CNN的整體架構，
+- 成器則是將卷積層替換成了反卷積層（fractional-strided convolution）或者叫轉置卷積層（Convolution Transpose）。
+- 在判別器和生成器中在每一層之後都是用了Batch Normalization（BN）層，有助於處理初始化不良導致的訓練問題，加速模型訓練，提升了訓練的穩定性。
+- 利用1*1卷積層替換到所有的全連接層。
+- 在生成器中除輸出層使用Tanh（Sigmoid）啟動函數，其餘層全部使用ReLu啟動函數。
+- 在判別器所有層都使用LeakyReLU啟動函數，防止梯度稀。
+![image](https://github.com/TaiwanHolyHigh/AI4H2022/assets/112990022/2d89ccec-7c66-453c-96f6-fa92a266b6b7)
 
 ## 什麼是生成對抗網路？
 - [生成對抗網路](https://arxiv.org/abs/1406.2661) (GAN) 是當今電腦科學領域最有趣的想法之一。
