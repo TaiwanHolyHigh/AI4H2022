@@ -1,15 +1,12 @@
 # 自編碼器簡介
 
+-	Tensorflow教程通過以下三個範例介紹自編碼器：基礎知識、圖像降噪和異常檢測。
+-	自編碼器是一種特殊類型的神經網路，經過訓練後可將其輸入複製到其輸出。例如，給定一個手寫數位的圖像，自編碼器首先將圖像編碼為低維的潛在表示，然後將該潛在表示解碼回圖像。
+-	自編碼器學習壓縮資料，同時最大程度地減少重構誤差。
 
-
-本教程通過以下三個示例介紹自編碼器：基礎知識、圖像降噪和異常檢測。
-
-自編碼器是一種特殊類型的神經網路，經過訓練後可將其輸入複製到其輸出。例如，給定一個手寫數位的圖像，自編碼器首先將圖像編碼為低維的潛在表示，然後將該潛在表示解碼回圖像。自編碼器學習壓縮資料，同時最大程度地減少重構誤差。
-
-要詳細瞭解自編碼器，請考慮閱讀 Ian Goodfellow、Yoshua Bengio 和 Aaron Courville 撰寫的[《深度學習》](https://www.deeplearningbook.org/)一書的第 14 章。
 
 ## 導入 TensorFlow 和其他庫
-
+```
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -20,13 +17,11 @@ from sklearn.model_selection import train_test_split
 from tensorflow.keras import layers, losses
 from tensorflow.keras.datasets import fashion_mnist
 from tensorflow.keras.models import Model
-
+```
 ## 載入資料集
-
 - 使用 Fashion MNIST 資料集訓練基本自編碼器。
 - 此資料集中的每個圖像均為 28x28 圖元。 
 ```
-
 (x_train, _), (x_test, _) = fashion_mnist.load_data()
 
 x_train = x_train.astype('float32') / 255.
@@ -34,9 +29,8 @@ x_test = x_test.astype('float32') / 255.
 
 print (x_train.shape)
 print (x_test.shape)
-
 ```
-## 第一個示例：基本自編碼器
+## 第一個範例：基本自編碼器
 
 ![Basic autoencoder results](https://github.com/tensorflow/docs-l10n/blob/master/site/zh-cn/tutorials/generative/images/intro_autoencoder_result.png?raw=1)
 
@@ -102,7 +96,7 @@ for i in range(n):
   ax.get_yaxis().set_visible(False)
 plt.show()
 ```
-# 第二個示例：圖像降噪
+# 第二個範例：圖像降噪
 
 ![Image denoising results](https://github.com/tensorflow/docs-l10n/blob/master/site/zh-cn/tutorials/generative/images/image_denoise_fmnist_results.png?raw=true)
 
@@ -145,7 +139,7 @@ plt.show()
 ```
 ### 定義卷積自編碼器
 
-在此示例中，您將使用 `encoder` 中的 [Conv2D](https://tensorflow.google.cn/api_docs/python/tf/keras/layers/Conv2D) 層和 `decoder` 中的 [Conv2DTranspose](https://tensorflow.google.cn/api_docs/python/tf/keras/layers/Conv2DTranspose) 層來訓練卷積自編碼器。
+在此範例中，您將使用 `encoder` 中的 [Conv2D](https://tensorflow.google.cn/api_docs/python/tf/keras/layers/Conv2D) 層和 `decoder` 中的 [Conv2DTranspose](https://tensorflow.google.cn/api_docs/python/tf/keras/layers/Conv2DTranspose) 層來訓練卷積自編碼器。
 ```
 
 class Denoise(Model):
@@ -210,13 +204,13 @@ for i in range(n):
 plt.show()
 
 ```
-# 第三個示例：異常檢測
+# 第三個範例：異常檢測
 
 ## 概述
 
-在此示例中，您將訓練自編碼器來檢測 [ECG5000 資料集](http://www.timeseriesclassification.com/description.php?Dataset=ECG5000)上的異常。此資料集包含 5,000 個[心電圖](https://en.wikipedia.org/wiki/Electrocardiography)，每個心電圖擁有 140 個資料點。您將使用簡化版的資料集，其中每個樣本都被標記為 `0`（對應於異常心律）或 `1`（對應于正常心律）。您需要關注如何識別異常心律。
+在此範例中，您將訓練自編碼器來檢測 [ECG5000 資料集](http://www.timeseriesclassification.com/description.php?Dataset=ECG5000)上的異常。此資料集包含 5,000 個[心電圖](https://en.wikipedia.org/wiki/Electrocardiography)，每個心電圖擁有 140 個資料點。您將使用簡化版的資料集，其中每個樣本都被標記為 `0`（對應於異常心律）或 `1`（對應于正常心律）。您需要關注如何識別異常心律。
 
-注：這是一個有標籤的資料集，因此您可以將其表述為一個監督學習問題。此示例的目標是說明可應用於沒有可用標籤的大型資料集的異常檢測概念（例如，如果您有成千上萬個正常心律，而只有少量異常心律）。
+注：這是一個有標籤的資料集，因此您可以將其表述為一個監督學習問題。此範例的目標是說明可應用於沒有可用標籤的大型資料集的異常檢測概念（例如，如果您有成千上萬個正常心律，而只有少量異常心律）。
 
 您將如何使用自編碼器檢測異常？回想一下，自編碼器經過訓練後可最大程度地減少重構誤差。您將只基於正常心律訓練自編碼器，隨後使用它來重構所有資料。我們的假設是，異常心律存在更高的重構誤差。隨後，如果重構誤差超過固定閾值，則將心律分類為異常。
 
