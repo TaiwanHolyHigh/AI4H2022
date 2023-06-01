@@ -254,10 +254,13 @@ def generate_and_save_images(model, epoch, test_input):
 ```
 
 ## 訓練模型
-上面定義的 `train()` 方法來同時訓練生成器和判別器。注意，訓練 GANs 可能是棘手的。重要的是，生成器和判別器不能夠互相壓制對方（例如，他們以相似的學習率訓練）。
-
-在訓練之初，生成的圖片看起來像是隨機雜訊。隨著訓練過程的進行，生成的數位將越來越真實。在大概 50 個 epoch 之後，這些圖片看起來像是 MNIST 數位。使用 Colab 中的預設設置可能需要大約 1 分鐘每 epoch。
-"""
+- 上面定義的 `train()` 方法來同時訓練生成器和判別器。
+- 訓練 GANs 可能是棘手的。
+- 重要的是，生成器和判別器不能夠互相壓制對方（例如，他們以相似的學習率訓練）。
+- 在訓練之初，生成的圖片看起來像是隨機雜訊。
+- 隨著訓練過程的進行，生成的數位將越來越真實。
+- 在大概 50 個 epoch 之後，這些圖片看起來像是 MNIST 數位。
+- 使用 Colab 中的預設設置可能需要大約 1 分鐘每 epoch。
 
 train(train_dataset, EPOCHS)
 
@@ -265,11 +268,11 @@ train(train_dataset, EPOCHS)
 
 checkpoint.restore(tf.train.latest_checkpoint(checkpoint_dir))
 
-"""## 創建 GIF
+## 創建 GIF
 
-"""
 
-# Display a single image using the epoch number
+### Display a single image using the epoch number
+````
 def display_image(epoch_no):
   return PIL.Image.open('image_at_epoch_{:04d}.png'.format(epoch_no))
 
@@ -290,5 +293,4 @@ with imageio.get_writer(anim_file, mode='I') as writer:
 
 import tensorflow_docs.vis.embed as embed
 embed.embed_file(anim_file)
-
 ```
