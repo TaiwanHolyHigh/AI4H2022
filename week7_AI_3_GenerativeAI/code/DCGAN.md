@@ -9,7 +9,7 @@
 - 利用1*1卷積層替換到所有的全連接層。
 - 在生成器中除輸出層使用Tanh（Sigmoid）啟動函數，其餘層全部使用ReLu啟動函數。
 - 在判別器所有層都使用LeakyReLU啟動函數，防止梯度稀。
-![image](https://github.com/TaiwanHolyHigh/AI4H2022/assets/112990022/2d89ccec-7c66-453c-96f6-fa92a266b6b7)
+
 
 ## 什麼是生成對抗網路？
 - [生成對抗網路](https://arxiv.org/abs/1406.2661) (GAN) 是當今電腦科學領域最有趣的想法之一。
