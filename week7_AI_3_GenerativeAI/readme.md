@@ -1,42 +1,19 @@
 # week7_AI_3_GenerativeAI
 - Generative AI
   - Image|Text|Music|Movie|Anything(X) generation 
+  - [Generative AI](GenerativeAI.md)
 - AutoEncoders(AE) and Variational autoencoder
+  - [AEs](./AEs.md)
 - GAN(Generative Adversarial Networks)生成對抗網路
   - [GANs implementation using MNIST data](https://github.com/MorvanZhou/mnistGANs)
 
 # 
 - [Easiest way to download kaggle data in Google Colab](https://www.kaggle.com/general/74235)
 - [How to Load Kaggle Datasets Directly Into Google Colab?](https://www.analyticsvidhya.com/blog/2021/06/how-to-load-kaggle-datasets-directly-into-google-colab/)
-# Generative AI
-- [Generating Sound with Neural Network](https://www.youtube.com/playlist?list=PL-wATfeyAMNpEyENTc-tVH5tfLGKtSWPp) [GITHUB](https://github.com/musikalkemist/generating-sound-with-neural-networks)
-- [ChatGPT is not all you need. A State of the Art Review of large Generative AI models(202301)](https://arxiv.org/abs/2301.04655)
-  - texts to images: DALLE-2 model
-  - text to 3D images: Dreamfusion model
-  - images to text: Flamingo model
-  - texts to video:e Phenaki model
-  - texts to audio: AudioLM model 
-  - texts to other texts: ChatGPT
-  - texts to code: Codex model
-  - texts to scientific texts:Galactica model or even create algorithms like AlphaTensor. 
+
   
   
-## AutoEncoders(AE) and Variational autoencoder
-- [From Autoencoder to Beta-VAE](https://lilianweng.github.io/posts/2018-08-12-vae/)
-- AutoEncoders(AE)
-  - 【TensorFlow 官方教學課程】[Intro to Autoencoders](https://www.tensorflow.org/tutorials/generative/autoencoder)
-  - 台大李弘毅教授演講[【機器學習2021】自編碼器 (Auto-encoder) (上) – 基本概念](https://www.youtube.com/watch?v=3oHlf8-J3Nc)
-  - 台大李弘毅教授演講[ML Lecture 16: Unsupervised Learning - Auto-encoder](https://www.youtube.com/watch?v=Tk5B4seA-AU&t=472s)
-- Denoising Autoencoders (DAE) 2008 去除雜訊
-  - [Extracting and Composing Robust Features with Denoising Autoencoders](https://www.cs.toronto.edu/~larocheh/publications/icml-2008-denoising-autoencoders.pdf) 
-  - [](https://towardsdatascience.com/denoising-autoencoders-dae-how-to-use-neural-networks-to-clean-up-your-data-cd9c19bc6915)
-- Variational autoencoder(VAE) 2013
-  - 經典論文[Auto-Encoding Variational Bayes| Diederik P Kingma, Max Welling](https://arxiv.org/abs/1312.6114)
-  - 陳縕儂 Vivian NTU MiuLab[台大資訊 深度學習之應用 | ADL 16.3: Variational Auto-Encoder (VAE) 固定特徵的分布資訊](https://www.youtube.com/watch?v=cjjjhHIDjKo)
-  - 【TensorFlow 官方教學課程】[Convolutional Variational Autoencoder](https://www.tensorflow.org/tutorials/generative/cvae) 
-  - [An Introduction to Variational Autoencoders(2019)Diederik P. Kingma, Max Welling](https://arxiv.org/abs/1906.02691)
-- k-Sparse Autoencoder 2013
-- Contractive Autoencoder 2011
+
 
 
 ## GAN(Generative Adversarial Networks)生成對抗網路
