@@ -3,7 +3,11 @@
   - Image|Text|Music|Movie|Anything(X) generation 
 - AutoEncoders(AE) and Variational autoencoder
 - GAN(Generative Adversarial Networks)生成對抗網路
+  - [GANs implementation using MNIST data](https://github.com/MorvanZhou/mnistGANs)
 
+# 
+- [Easiest way to download kaggle data in Google Colab](https://www.kaggle.com/general/74235)
+- [How to Load Kaggle Datasets Directly Into Google Colab?](https://www.analyticsvidhya.com/blog/2021/06/how-to-load-kaggle-datasets-directly-into-google-colab/)
 # Generative AI
 - [Generating Sound with Neural Network](https://www.youtube.com/playlist?list=PL-wATfeyAMNpEyENTc-tVH5tfLGKtSWPp) [GITHUB](https://github.com/musikalkemist/generating-sound-with-neural-networks)
 - [ChatGPT is not all you need. A State of the Art Review of large Generative AI models(202301)](https://arxiv.org/abs/2301.04655)
