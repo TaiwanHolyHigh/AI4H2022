@@ -14,3 +14,4 @@
   - [An Introduction to Variational Autoencoders(2019)Diederik P. Kingma, Max Welling](https://arxiv.org/abs/1906.02691)
 - k-Sparse Autoencoder 2013
 - Contractive Autoencoder 2011
+- β-TCVAE
