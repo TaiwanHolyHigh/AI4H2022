@@ -1,0 +1,11 @@
+# Generative AI
+- [Generating Sound with Neural Network](https://www.youtube.com/playlist?list=PL-wATfeyAMNpEyENTc-tVH5tfLGKtSWPp) [GITHUB](https://github.com/musikalkemist/generating-sound-with-neural-networks)
+- [ChatGPT is not all you need. A State of the Art Review of large Generative AI models(202301)](https://arxiv.org/abs/2301.04655)
+  - texts to images: DALLE-2 model
+  - text to 3D images: Dreamfusion model
+  - images to text: Flamingo model
+  - texts to video:e Phenaki model
+  - texts to audio: AudioLM model 
+  - texts to other texts: ChatGPT
+  - texts to code: Codex model
+  - texts to scientific texts:Galactica model or even create algorithms like AlphaTensor. 
