@@ -207,18 +207,21 @@ plt.show()
 # 第三個範例：異常檢測
 
 ## 概述
-
-在此範例中，您將訓練自編碼器來檢測 [ECG5000 資料集](http://www.timeseriesclassification.com/description.php?Dataset=ECG5000)上的異常。此資料集包含 5,000 個[心電圖](https://en.wikipedia.org/wiki/Electrocardiography)，每個心電圖擁有 140 個資料點。您將使用簡化版的資料集，其中每個樣本都被標記為 `0`（對應於異常心律）或 `1`（對應于正常心律）。您需要關注如何識別異常心律。
-
-注：這是一個有標籤的資料集，因此您可以將其表述為一個監督學習問題。此範例的目標是說明可應用於沒有可用標籤的大型資料集的異常檢測概念（例如，如果您有成千上萬個正常心律，而只有少量異常心律）。
-
-您將如何使用自編碼器檢測異常？回想一下，自編碼器經過訓練後可最大程度地減少重構誤差。您將只基於正常心律訓練自編碼器，隨後使用它來重構所有資料。我們的假設是，異常心律存在更高的重構誤差。隨後，如果重構誤差超過固定閾值，則將心律分類為異常。
+- 在此範例中，將訓練自編碼器來檢測 [ECG5000 資料集](http://www.timeseriesclassification.com/description.php?Dataset=ECG5000)上的異常。
+- 此資料集包含 5,000 個[心電圖](https://en.wikipedia.org/wiki/Electrocardiography)，每個心電圖擁有 140 個資料點。
+- 使用簡化版的資料集，其中每個樣本都被標記為 `0`（對應於異常心律）或 `1`（對應于正常心律）。
+- 需要關注如何識別異常心律。
+- 注意：這是一個有標籤的資料集，因此您可以將其表述為一個監督學習問題。
+- 此範例的目標是說明可應用於沒有可用標籤的大型資料集的異常檢測概念（例如，如果您有成千上萬個正常心律，而只有少量異常心律）。
+- 要如何使用自編碼器檢測異常？
+- 回想一下，自編碼器經過訓練後可最大程度地減少重構誤差。
+- 您將只基於正常心律訓練自編碼器，隨後使用它來重構所有資料。
+- 此範例的假設是，異常心律存在更高的重構誤差。
+- 隨後，如果重構誤差超過固定閾值，則將心律分類為異常。
 
 ### 載入心電圖數據
-
-您將使用的資料集基於 [timeseriesclassification.com](http://www.timeseriesclassification.com/description.php?Dataset=ECG5000) 中的資料集。
+- 使用的資料集基於 [timeseriesclassification.com](http://www.timeseriesclassification.com/description.php?Dataset=ECG5000) 中的資料集。
 ```
-
 # Download the dataset
 dataframe = pd.read_csv('http://storage.googleapis.com/download.tensorflow.org/data/ecg.csv', header=None)
 raw_data = dataframe.values
@@ -234,9 +237,7 @@ train_data, test_data, train_labels, test_labels = train_test_split(
     data, labels, test_size=0.2, random_state=21
 )
 
-"""將數據歸一化為 `[0,1]`。
-
-"""
+"""將數據歸一化為 `[0,1]`。"""
 
 min_val = tf.reduce_min(train_data)
 max_val = tf.reduce_max(train_data)
@@ -247,7 +248,7 @@ test_data = (test_data - min_val) / (max_val - min_val)
 train_data = tf.cast(train_data, tf.float32)
 test_data = tf.cast(test_data, tf.float32)
 
-"""您將僅使用正常心律訓練自編碼器，在此資料集中，正常心律被標記為 `1`。將正常心律與異常心律分開。"""
+"""使用正常心律訓練自編碼器，在此資料集中，正常心律被標記為 `1`。將正常心律與異常心律分開。"""
 
 train_labels = train_labels.astype(bool)
 test_labels = test_labels.astype(bool)
