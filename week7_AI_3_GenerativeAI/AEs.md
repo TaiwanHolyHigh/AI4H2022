@@ -1,0 +1,16 @@
+## AutoEncoders(AE) and Variational autoencoder
+- [From Autoencoder to Beta-VAE](https://lilianweng.github.io/posts/2018-08-12-vae/)
+- AutoEncoders(AE)
+  - 【TensorFlow 官方教學課程】[Intro to Autoencoders](https://www.tensorflow.org/tutorials/generative/autoencoder)
+  - 台大李弘毅教授演講[【機器學習2021】自編碼器 (Auto-encoder) (上) – 基本概念](https://www.youtube.com/watch?v=3oHlf8-J3Nc)
+  - 台大李弘毅教授演講[ML Lecture 16: Unsupervised Learning - Auto-encoder](https://www.youtube.com/watch?v=Tk5B4seA-AU&t=472s)
+- Denoising Autoencoders (DAE) 2008 去除雜訊
+  - [Extracting and Composing Robust Features with Denoising Autoencoders](https://www.cs.toronto.edu/~larocheh/publications/icml-2008-denoising-autoencoders.pdf) 
+  - [](https://towardsdatascience.com/denoising-autoencoders-dae-how-to-use-neural-networks-to-clean-up-your-data-cd9c19bc6915)
+- Variational autoencoder(VAE) 2013
+  - 經典論文[Auto-Encoding Variational Bayes| Diederik P Kingma, Max Welling](https://arxiv.org/abs/1312.6114)
+  - 陳縕儂 Vivian NTU MiuLab[台大資訊 深度學習之應用 | ADL 16.3: Variational Auto-Encoder (VAE) 固定特徵的分布資訊](https://www.youtube.com/watch?v=cjjjhHIDjKo)
+  - 【TensorFlow 官方教學課程】[Convolutional Variational Autoencoder](https://www.tensorflow.org/tutorials/generative/cvae) 
+  - [An Introduction to Variational Autoencoders(2019)Diederik P. Kingma, Max Welling](https://arxiv.org/abs/1906.02691)
+- k-Sparse Autoencoder 2013
+- Contractive Autoencoder 2011
