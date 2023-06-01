@@ -1,10 +1,12 @@
-# -*- coding: utf-8 -*-
-
-本教程演示了如何使用[深度卷積生成對抗網路](https://arxiv.org/pdf/1511.06434.pdf) (DCGAN) 生成手寫數位的圖像。該代碼是使用 [Keras 序列式 API](https://tensorflow.google.cn/guide/keras) 與 `tf.GradientTape` 訓練迴圈編寫的。
+# 說明
+- 本教程演示了如何使用[深度卷積生成對抗網路](https://arxiv.org/pdf/1511.06434.pdf) (DCGAN) 生成手寫數位的圖像。
+- 該代碼是使用 [Keras 序列式 API](https://tensorflow.google.cn/guide/keras) 與 `tf.GradientTape` 訓練迴圈編寫的。
 
 ## 什麼是生成對抗網路？
-
-[生成對抗網路](https://arxiv.org/abs/1406.2661) (GAN) 是當今電腦科學領域最有趣的想法之一。兩個模型通過對抗過程同時訓練。*生成器*（“藝術家”）學習創建看起來真實的圖像，而*判別器*（“藝術評論家”）學習區分真假圖像。
+- [生成對抗網路](https://arxiv.org/abs/1406.2661) (GAN) 是當今電腦科學領域最有趣的想法之一。
+- 兩個模型通過對抗過程同時訓練。
+- *生成器*（“藝術家”）學習創建看起來真實的圖像，
+- 而*判別器*（“藝術評論家”）學習區分真假圖像。
 
 ![生成器和判別器圖示](https://github.com/tensorflow/docs/blob/master/site/en/tutorials/generative/images/gan1.png?raw=1)
 
