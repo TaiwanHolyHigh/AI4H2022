@@ -12,10 +12,13 @@
   - [Conditional Generative Adversarial Nets Mehdi Mirza, Simon Osindero(201411)](https://arxiv.org/abs/1411.1784)
 - Deep Convolutional GANs(DCGAN) 2015
   - 論文[Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks|Alec Radford, Luke Metz, Soumith Chintala](https://arxiv.org/abs/1511.06434) 
-  - Tensorflow 實作
+  - 介紹性文章
+    - [深度卷积 DCGAN| 莫烦](https://mofanpy.com/tutorials/machine-learning/gan/dcgan)
+  - Tensorflow 實作 
     - 【TensorFlow 官方教學課程】[Deep Convolutional Generative Adversarial Network](https://www.tensorflow.org/tutorials/generative/dcgan) 
   - Pytorch 實作
-    - [Mastering PyTorch(2021)](https://www.packtpub.com/product/mastering-pytorch/9781789614381) [GITHUB](https://github.com/PacktPublishing/Mastering-PyTorch)Chapter 8: Deep Convolutional GANs 
+    - 📚[Mastering PyTorch(2021)](https://www.packtpub.com/product/mastering-pytorch/9781789614381) [GITHUB](https://github.com/PacktPublishing/Mastering-PyTorch)Chapter 8: Deep Convolutional GANs 
+    - ▶️[DCGAN implementation from scratch](https://www.youtube.com/watch?v=IZtv9s_Wx9I&list=PLhhyoLH6IjfwIp8bZnzX8QR30TRcHO8Va&index=4)
 - pix2pix 2016
   - 論文[Image-to-Image Translation with `Conditional Adversarial Networks`(條件式對抗網路)](https://arxiv.org/abs/1611.07004)
   - 【TensorFlow 官方教學課程】[pix2pix: Image-to-image translation with a conditional GAN](https://www.tensorflow.org/tutorials/generative/pix2pix)
