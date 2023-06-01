@@ -9,7 +9,7 @@
 ## GAN(Generative Adversarial Networks)生成對抗網路 重要歷史發展
 - 2014開山巨作 [Generative Adversarial Networks|Ian J. Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley, Sherjil Ozair, Aaron Courville, Yoshua Bengio](https://arxiv.org/abs/1406.2661)
 - CGan(Conditional Generative Adversarial Nets) 2014
-  - [Conditional Generative Adversarial Nets Mehdi Mirza, Simon Osindero]()
+  - [Conditional Generative Adversarial Nets Mehdi Mirza, Simon Osindero(201411)](https://arxiv.org/abs/1411.1784)
 - Deep Convolutional GANs(DCGAN) 2015
   - 論文[Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks|Alec Radford, Luke Metz, Soumith Chintala](https://arxiv.org/abs/1511.06434) 
   - Tensorflow 實作
