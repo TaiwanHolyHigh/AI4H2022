@@ -14,12 +14,13 @@
   - [Machine Learning Collection](https://github.com/aladdinpersson/Machine-Learning-Collection)
 - 課程
   - [coursea|Generative Adversarial Networks (GANs)](https://www.coursera.org/specializations/generative-adversarial-networks-gans?irclickid=V7uWcoSiLxyNWY63KBXsBV5NUkAS7438%3AyWHWY0&irgwc=1&utm_medium=partners&utm_source=impact&utm_campaign=3421879&utm_content=b2c) 
-  - [Udemy|]()
+  - [Udemy|Generative Adversarial Networks](https://www.udemy.com/courses/search/?src=ukw&q=Generative+Adversarial+Networks)
   - [台大李弘毅教授|](https://speech.ee.ntu.edu.tw/~hylee/index.php)
     - [MACHINE LEARNING 2023 SPRING](https://speech.ee.ntu.edu.tw/~hylee/ml/2023-spring.php)
       - GENErative AI 為主 
     - [MACHINE LEARNING 2022 SPRING](https://speech.ee.ntu.edu.tw/~hylee/ml/2022-spring.php)
-      - 3/25	Lecture 6:Generation  
+      - 3/25	Lecture 6:Generation 
+    - [MACHINE LEARNING 2021 SPRING](https://speech.ee.ntu.edu.tw/~hylee/ml/2021-spring.php) 
 ## GAN(Generative Adversarial Networks)生成對抗網路 重要歷史發展
 - 2014開山巨作 [Generative Adversarial Networks|Ian J. Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley, Sherjil Ozair, Aaron Courville, Yoshua Bengio](https://arxiv.org/abs/1406.2661)
 - CGan(Conditional Generative Adversarial Nets) 2014
