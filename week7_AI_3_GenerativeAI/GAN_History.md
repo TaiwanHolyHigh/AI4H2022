@@ -40,6 +40,9 @@
       - [CelebFaces Attributes (CelebA)＠Kaggle](https://www.kaggle.com/jessicali9530/celeba-dataset)
     - [DCGAN implementation from scratch](https://github.com/AarohiSingla/DCGAN-Generating-Fake-Faces-with-DCGAN/tree/main)
       - [YOUTUEBE教學影片](https://youtu.be/-8S1KL7yod0) 
+  - [GAN Training Challenges: DCGAN for Color Images](https://pyimagesearch.com/2021/12/13/gan-training-challenges-dcgan-for-color-images/)
+    - [Clothing & Models@kaggle](https://www.kaggle.com/datasets/dqmonn/zalando-store-crawl)
+      - A collection of clothing pieces, scraped from Zalando.com  
 - pix2pix 2016
   - 論文[Image-to-Image Translation with `Conditional Adversarial Networks`(條件式對抗網路)](https://arxiv.org/abs/1611.07004)
   - 【TensorFlow 官方教學課程】[pix2pix: Image-to-image translation with a conditional GAN](https://www.tensorflow.org/tutorials/generative/pix2pix)
