@@ -8,6 +8,7 @@
   - Deep Diving into GANs: From Theory to Production (EuroSciPy 2018) by Michele De Simoni, Paolo Galeone [Video](https://www.youtube.com/watch?v=CePrdabdtxw)
   - [Generative Adversarial Networks | Data Science Summer School 2022](https://www.youtube.com/watch?v=xMJTylr4E30&t=2s)
 - GAN教學影片
+  - [台大李弘毅教授|Generative Adversarial Network (GAN), 2018  10 部影片](https://www.youtube.com/playlist?list=PLJV_el3uVTsMq6JEFPW35BCiOQTsoqwNw)
   - [generative adversarial networks | GANs Code With Aarohi 10 部影片](https://www.youtube.com/playlist?list=PLv8Cp2NvcY8AbK0RNZGeQFEPESqCzHQvj)
   - [Generative Adversarial Networks (GANs) Playlist | Aladdin Persson |15 部影片](https://www.youtube.com/playlist?list=PLhhyoLH6IjfwIp8bZnzX8QR30TRcHO8Va) Pytorch
 - GITTHUB
