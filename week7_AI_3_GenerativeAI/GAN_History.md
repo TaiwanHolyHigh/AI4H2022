@@ -22,7 +22,8 @@
   - Generating Fake Faces with DCGAN
     - CelebFaces Attributes (CelebA)Dataset　a large-scale face attributes dataset with more than 200K celebrity images
       - [CelebFaces Attributes (CelebA)＠Kaggle](https://www.kaggle.com/jessicali9530/celeba-dataset)
-      - [DCGAN implementation from scratch](https://www.kaggle.com/jessicali9530/celeba-dataset)
+    - [DCGAN implementation from scratch](https://github.com/AarohiSingla/DCGAN-Generating-Fake-Faces-with-DCGAN/tree/main)
+      - [YOUTUEBE教學影片](https://youtu.be/-8S1KL7yod0) 
 - pix2pix 2016
   - 論文[Image-to-Image Translation with `Conditional Adversarial Networks`(條件式對抗網路)](https://arxiv.org/abs/1611.07004)
   - 【TensorFlow 官方教學課程】[pix2pix: Image-to-image translation with a conditional GAN](https://www.tensorflow.org/tutorials/generative/pix2pix)
