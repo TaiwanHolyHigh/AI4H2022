@@ -31,22 +31,29 @@
 - Deep Convolutional GANs(DCGAN) 2015
   - 論文[Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks|Alec Radford, Luke Metz, Soumith Chintala](https://arxiv.org/abs/1511.06434) 
   - 介紹性文章
+    - [Day 28：小學生談『生成對抗網路』(Generative Adversarial Network，GAN）](https://ithelp.ithome.com.tw/articles/10196257)
+    - [深度卷积对抗生成网络(DCGAN)](https://blog.csdn.net/stdcoutzyx/article/details/53872121)
     - [深度卷积 DCGAN| 莫烦](https://mofanpy.com/tutorials/machine-learning/gan/dcgan)
-  - Tensorflow 實作 
+    - [【GAN】三、DCGAN论文详解](https://zhuanlan.zhihu.com/p/83630387)
+  - 使用MNIST資料集產生手寫數字圖片 
     - 【TensorFlow 官方教學課程】[Deep Convolutional Generative Adversarial Network](https://www.tensorflow.org/tutorials/generative/dcgan) 
-  - Pytorch 實作
-    - 📚[Mastering PyTorch(2021)](https://www.packtpub.com/product/mastering-pytorch/9781789614381) [GITHUB](https://github.com/PacktPublishing/Mastering-PyTorch)Chapter 8: Deep Convolutional GANs 
-    - ▶️[DCGAN implementation from scratch](https://www.youtube.com/watch?v=IZtv9s_Wx9I&list=PLhhyoLH6IjfwIp8bZnzX8QR30TRcHO8Va&index=4)
-  - Generating Fake Faces with DCGAN
+    - Pytorch 實作
+      - 📚[Mastering PyTorch(2021)](https://www.packtpub.com/product/mastering-pytorch/9781789614381) [GITHUB](https://github.com/PacktPublishing/Mastering-PyTorch)Chapter 8: Deep Convolutional GANs 
+      - ▶️[DCGAN implementation from scratch](https://www.youtube.com/watch?v=IZtv9s_Wx9I&list=PLhhyoLH6IjfwIp8bZnzX8QR30TRcHO8Va&index=4)
+  - 人臉產生器 == > Generating Fake Faces with DCGAN
     - CelebFaces Attributes (CelebA)Dataset　a large-scale face attributes dataset with more than 200K celebrity images
       - [CelebFaces Attributes (CelebA)＠Kaggle](https://www.kaggle.com/jessicali9530/celeba-dataset)
     - [DCGAN implementation from scratch](https://github.com/AarohiSingla/DCGAN-Generating-Fake-Faces-with-DCGAN/tree/main)
       - [YOUTUEBE教學影片](https://youtu.be/-8S1KL7yod0) 
+    - [Pytorch官方教學影片](https://pytorch.org/tutorials/beginner/dcgan_faces_tutorial.html)
   - [GAN Training Challenges: DCGAN for Color Images](https://pyimagesearch.com/2021/12/13/gan-training-challenges-dcgan-for-color-images/)
     - [Clothing & Models@kaggle](https://www.kaggle.com/datasets/dqmonn/zalando-store-crawl)
       - A collection of clothing pieces, scraped from Zalando.com  
-  - 動漫人臉產生器
-    - 動漫人臉數據集，它包含超過 63,000 個裁剪後的動漫人臉 
+  - 動漫人臉產生器 
+    - [Anime Face Dataset](https://www.kaggle.com/datasets/splcher/animefacedataset) Mckinsey666 dataset scraped from www.getchu.com
+      - 動漫人臉數據集，它包含超過 63,000 個裁剪後的動漫人臉 
+    - [Starter: Anime Face Dataset@Kaggle](https://www.kaggle.com/code/splcher/starter-anime-face-dataset/notebook)
+    - [在 PyTorch 中訓練生成對抗網絡 (GAN)](https://jovian.com/adi7mitra/unsupervised-dcgan)
 - pix2pix 2016
   - 論文[Image-to-Image Translation with `Conditional Adversarial Networks`(條件式對抗網路)](https://arxiv.org/abs/1611.07004)
   - 【TensorFlow 官方教學課程】[pix2pix: Image-to-image translation with a conditional GAN](https://www.tensorflow.org/tutorials/generative/pix2pix)
