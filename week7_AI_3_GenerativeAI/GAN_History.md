@@ -1,13 +1,25 @@
 # GAN_History
+
+## GAN(Generative Adversarial Networks)生成對抗網路
+- [參考書籍](./REF_GAN.md) [The GAN Zoo](https://github.com/hindupuravinash/the-gan-zoo)
+- GAN演講影片
+  - Generative Adversarial Networks by Ian Goodfellow [Generative Adversarial Networks (NIPS 2016 tutorial)](https://www.youtube.com/watch?v=HGYYEUSm-0Q)
+  - Tutorial on Generative Adversarial Networks by Mark Chang [Video](https://www.youtube.com/playlist?list=PLeeHDpwX2Kj5Ugx6c9EfDLDojuQxnmxmU)
+  - Deep Diving into GANs: From Theory to Production (EuroSciPy 2018) by Michele De Simoni, Paolo Galeone [Video](https://www.youtube.com/watch?v=CePrdabdtxw)
+  - [Generative Adversarial Networks | Data Science Summer School 2022](https://www.youtube.com/watch?v=xMJTylr4E30&t=2s)
 - GAN教學影片
   - [generative adversarial networks | GANs Code With Aarohi 10 部影片](https://www.youtube.com/playlist?list=PLv8Cp2NvcY8AbK0RNZGeQFEPESqCzHQvj)
   - [Generative Adversarial Networks (GANs) Playlist | Aladdin Persson |15 部影片](https://www.youtube.com/playlist?list=PLhhyoLH6IjfwIp8bZnzX8QR30TRcHO8Va) Pytorch
-## GAN(Generative Adversarial Networks)生成對抗網路
-- [參考書籍](./REF_GAN.md) [The GAN Zoo](https://github.com/hindupuravinash/the-gan-zoo)
-- Generative Adversarial Networks by Ian Goodfellow [Generative Adversarial Networks (NIPS 2016 tutorial)](https://www.youtube.com/watch?v=HGYYEUSm-0Q)
-- Tutorial on Generative Adversarial Networks by Mark Chang [Video](https://www.youtube.com/playlist?list=PLeeHDpwX2Kj5Ugx6c9EfDLDojuQxnmxmU)
-- Deep Diving into GANs: From Theory to Production (EuroSciPy 2018) by Michele De Simoni, Paolo Galeone [Video](https://www.youtube.com/watch?v=CePrdabdtxw)
-- [Generative Adversarial Networks | Data Science Summer School 2022](https://www.youtube.com/watch?v=xMJTylr4E30&t=2s)
+- GITTHUB
+  - [Machine Learning Collection](https://github.com/aladdinpersson/Machine-Learning-Collection)
+- 課程
+  - [coursea|Generative Adversarial Networks (GANs)](https://www.coursera.org/specializations/generative-adversarial-networks-gans?irclickid=V7uWcoSiLxyNWY63KBXsBV5NUkAS7438%3AyWHWY0&irgwc=1&utm_medium=partners&utm_source=impact&utm_campaign=3421879&utm_content=b2c) 
+  - [Udemy|]()
+  - [台大李弘毅教授|](https://speech.ee.ntu.edu.tw/~hylee/index.php)
+    - [MACHINE LEARNING 2023 SPRING](https://speech.ee.ntu.edu.tw/~hylee/ml/2023-spring.php)
+      - GENErative AI 為主 
+    - [MACHINE LEARNING 2022 SPRING](https://speech.ee.ntu.edu.tw/~hylee/ml/2022-spring.php)
+      - 3/25	Lecture 6:Generation  
 ## GAN(Generative Adversarial Networks)生成對抗網路 重要歷史發展
 - 2014開山巨作 [Generative Adversarial Networks|Ian J. Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley, Sherjil Ozair, Aaron Courville, Yoshua Bengio](https://arxiv.org/abs/1406.2661)
 - CGan(Conditional Generative Adversarial Nets) 2014
