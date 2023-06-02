@@ -10,6 +10,7 @@
 - GAN(Generative Adversarial Networks)生成對抗網路
   - [GAN_History](./GAN_History.md)
   - [GANs implementation using MNIST data](https://github.com/MorvanZhou/mnistGANs)
+    - 使用各種GAN去產生 MNIST類型的手寫數字圖片
   - 範例說明 Deep Convolutional Generative Adversarial Network
     - 【TensorFlow 官方教學課程】[Deep Convolutional Generative Adversarial Network](https://www.tensorflow.org/tutorials/generative/dcgan) 
 
