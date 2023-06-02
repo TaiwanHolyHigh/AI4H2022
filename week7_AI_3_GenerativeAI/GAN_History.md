@@ -1,5 +1,7 @@
 # GAN_History
-
+- GAN教學影片
+  - [generative adversarial networks | GANs Code With Aarohi 10 部影片](https://www.youtube.com/playlist?list=PLv8Cp2NvcY8AbK0RNZGeQFEPESqCzHQvj)
+  - [Generative Adversarial Networks (GANs) Playlist | Aladdin Persson |15 部影片](https://www.youtube.com/playlist?list=PLhhyoLH6IjfwIp8bZnzX8QR30TRcHO8Va)
 ## GAN(Generative Adversarial Networks)生成對抗網路
 - [參考書籍](./REF_GAN.md) [The GAN Zoo](https://github.com/hindupuravinash/the-gan-zoo)
 - Generative Adversarial Networks by Ian Goodfellow [Generative Adversarial Networks (NIPS 2016 tutorial)](https://www.youtube.com/watch?v=HGYYEUSm-0Q)
