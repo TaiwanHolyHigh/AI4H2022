@@ -21,7 +21,7 @@
     - ▶️[DCGAN implementation from scratch](https://www.youtube.com/watch?v=IZtv9s_Wx9I&list=PLhhyoLH6IjfwIp8bZnzX8QR30TRcHO8Va&index=4)
   - Generating Fake Faces with DCGAN
     - CelebFaces Attributes (CelebA)Dataset　a large-scale face attributes dataset with more than 200K celebrity images
-      - [CelebFaces Attributes (CelebA)＠](https://www.kaggle.com/jessicali9530/celeba-dataset)
+      - [CelebFaces Attributes (CelebA)＠Kaggle](https://www.kaggle.com/jessicali9530/celeba-dataset)
       - [DCGAN implementation from scratch](https://www.kaggle.com/jessicali9530/celeba-dataset)
 - pix2pix 2016
   - 論文[Image-to-Image Translation with `Conditional Adversarial Networks`(條件式對抗網路)](https://arxiv.org/abs/1611.07004)
