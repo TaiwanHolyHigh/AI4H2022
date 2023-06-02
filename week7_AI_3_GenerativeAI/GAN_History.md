@@ -16,6 +16,7 @@
   - [coursea|Generative Adversarial Networks (GANs)](https://www.coursera.org/specializations/generative-adversarial-networks-gans?irclickid=V7uWcoSiLxyNWY63KBXsBV5NUkAS7438%3AyWHWY0&irgwc=1&utm_medium=partners&utm_source=impact&utm_campaign=3421879&utm_content=b2c) 
   - [Udemy|Generative Adversarial Networks](https://www.udemy.com/courses/search/?src=ukw&q=Generative+Adversarial+Networks)
   - [台大李弘毅教授|](https://speech.ee.ntu.edu.tw/~hylee/index.php)
+    - [Hung-yi Lee@YOUTUBE](https://www.youtube.com/channel/UC2ggjtuuWvxrHHHiaDH1dlQ)
     - [MACHINE LEARNING 2023 SPRING](https://speech.ee.ntu.edu.tw/~hylee/ml/2023-spring.php)
       - GENErative AI 為主 
     - [MACHINE LEARNING 2022 SPRING](https://speech.ee.ntu.edu.tw/~hylee/ml/2022-spring.php)
@@ -43,6 +44,8 @@
   - [GAN Training Challenges: DCGAN for Color Images](https://pyimagesearch.com/2021/12/13/gan-training-challenges-dcgan-for-color-images/)
     - [Clothing & Models@kaggle](https://www.kaggle.com/datasets/dqmonn/zalando-store-crawl)
       - A collection of clothing pieces, scraped from Zalando.com  
+  - 動漫人臉產生器
+    - 動漫人臉數據集，它包含超過 63,000 個裁剪後的動漫人臉 
 - pix2pix 2016
   - 論文[Image-to-Image Translation with `Conditional Adversarial Networks`(條件式對抗網路)](https://arxiv.org/abs/1611.07004)
   - 【TensorFlow 官方教學課程】[pix2pix: Image-to-image translation with a conditional GAN](https://www.tensorflow.org/tutorials/generative/pix2pix)
