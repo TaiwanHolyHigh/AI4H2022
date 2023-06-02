@@ -19,10 +19,10 @@
   - Pytorch 實作
     - 📚[Mastering PyTorch(2021)](https://www.packtpub.com/product/mastering-pytorch/9781789614381) [GITHUB](https://github.com/PacktPublishing/Mastering-PyTorch)Chapter 8: Deep Convolutional GANs 
     - ▶️[DCGAN implementation from scratch](https://www.youtube.com/watch?v=IZtv9s_Wx9I&list=PLhhyoLH6IjfwIp8bZnzX8QR30TRcHO8Va&index=4)
-　- Generating Fake Faces with DCGAN
-　　　- CelebFaces Attributes (CelebA)Dataset　a large-scale face attributes dataset with more than 200K celebrity images
-　　　　　- [CelebFaces Attributes (CelebA)＠](https://www.kaggle.com/jessicali9530/celeba-dataset)
-　　　- [DCGAN implementation from scratch](https://www.kaggle.com/jessicali9530/celeba-dataset)
+  - Generating Fake Faces with DCGAN
+    - CelebFaces Attributes (CelebA)Dataset　a large-scale face attributes dataset with more than 200K celebrity images
+      - [CelebFaces Attributes (CelebA)＠](https://www.kaggle.com/jessicali9530/celeba-dataset)
+      - [DCGAN implementation from scratch](https://www.kaggle.com/jessicali9530/celeba-dataset)
 - pix2pix 2016
   - 論文[Image-to-Image Translation with `Conditional Adversarial Networks`(條件式對抗網路)](https://arxiv.org/abs/1611.07004)
   - 【TensorFlow 官方教學課程】[pix2pix: Image-to-image translation with a conditional GAN](https://www.tensorflow.org/tutorials/generative/pix2pix)
