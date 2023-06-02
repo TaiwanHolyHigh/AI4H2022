@@ -54,6 +54,7 @@
       - 動漫人臉數據集，它包含超過 63,000 個裁剪後的動漫人臉 
     - [Starter: Anime Face Dataset@Kaggle](https://www.kaggle.com/code/splcher/starter-anime-face-dataset/notebook)
     - [在 PyTorch 中訓練生成對抗網絡 (GAN)](https://jovian.com/adi7mitra/unsupervised-dcgan)
+  - ??[DCGAN-based symmetric encryption end-to-end communication systems(2022)](https://www.sciencedirect.com/science/article/abs/pii/S1434841122001856)
 - pix2pix 2016
   - 論文[Image-to-Image Translation with `Conditional Adversarial Networks`(條件式對抗網路)](https://arxiv.org/abs/1611.07004)
   - 【TensorFlow 官方教學課程】[pix2pix: Image-to-image translation with a conditional GAN](https://www.tensorflow.org/tutorials/generative/pix2pix)
